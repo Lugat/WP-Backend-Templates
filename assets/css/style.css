@@ -1,0 +1,29 @@
+#backend-template {
+  margin-top:10px;
+}
+
+#backend-template #postdivrich {
+  display:none;
+}
+
+#backend-template .row {
+  box-sizing:border-box;
+  margin:0 -10px;
+  display:block;
+  clear:both;
+  content:'';
+}
+
+#backend-template .row .col {
+  box-sizing:border-box;
+  padding:0 10px;
+  float:left;
+}
+
+#backend-template .postbox > div {
+  padding:10px;
+}
+
+#backend-template h2 {
+  border-bottom:1px solid #eee;
+}
