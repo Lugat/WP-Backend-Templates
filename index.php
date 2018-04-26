@@ -3,8 +3,8 @@
   /**
    * Plugin Name: Backend Templates
    * Plugin URI: http://squareflower.de
-   * Description: Allows you to create simple backend templates for Wordpress
-   * Version: 0.1
+   * Description: Allows you to create simple backend templates for WordPress
+   * Version: 0.2
    * Author: SquareFlower Websolutions (Lukas Rydygel) <hallo@squareflower.de>
    * Author URI: http://squareflower.de
    */
@@ -21,12 +21,13 @@
     require_once('src/Frontend.php');
     Jinx\Frontend::init();
     
+    /**
+     * Helper function
+     * 
+     * @param string $block
+     */
     function the_content_block($block) {
-
-      $contentBlock = Jinx\Frontend::getContentBlock($block);
-
-      echo apply_filters('the_content', $contentBlock);
-
+      echo Jinx\Frontend::getContentBlock($block);
     }
     
   }

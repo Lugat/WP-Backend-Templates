@@ -27,3 +27,7 @@
 #backend-template h2 {
   border-bottom:1px solid #eee;
 }
+#backend-template h2 span {
+  color:#dfdfdf;
+  float:right;
+}
