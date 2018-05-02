@@ -51,14 +51,18 @@
 
       // Add action to "content_save_pre"
       add_filter('content_save_pre', function($content) {
+        
+        if (isset($_POST[self::PREFIX]) && !empty($_POST[self::PREFIX])) {
 
-        // Start empty content
-        $content = '';
+          // Start empty content
+          $content = '';
 
-        // Get the content fields and implode them with HTML-comments
-        // The content will still be shown, even if the plugin is removed
-        foreach ($_POST[self::PREFIX] as $block => $string) {
-          $content .= '<!--:'.$block.'-->'.trim($string).'<!--:-->'; 
+          // Get the content fields and implode them with HTML-comments
+          // The content will still be shown, even if the plugin is removed
+          foreach ($_POST[self::PREFIX] as $block => $string) {
+            $content .= '<!--:'.$block.'-->'.trim($string).'<!--:-->'; 
+          }
+        
         }
 
         return $content;
