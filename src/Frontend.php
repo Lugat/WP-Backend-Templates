@@ -7,7 +7,7 @@
    * @copyright Copyright (c) 2018 SquareFlower Websolutions
    * @license BSD License
    * @author Lukas Rydygel <hallo@squareflower.de>
-   * @version 0.2
+   * @version 0.2.1
    * @since 0.1
    */
   
@@ -40,7 +40,7 @@
       $blocks = self::parseBlocks($post->post_content);
 
       // Check if the block exists and return its content
-      if (isset($block) && array_key_exists($block, $blocks)) {
+      if (array_key_exists($block, $blocks)) {
         return apply_filters('the_content', $blocks[$block]);
       }
       

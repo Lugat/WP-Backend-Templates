@@ -4,7 +4,7 @@
    * Plugin Name: Backend Templates
    * Plugin URI: http://squareflower.de
    * Description: Allows you to create simple backend templates for WordPress
-   * Version: 0.2.1
+   * Version: 0.2.2
    * Author: SquareFlower Websolutions (Lukas Rydygel) <hallo@squareflower.de>
    * Author URI: http://squareflower.de
    */
